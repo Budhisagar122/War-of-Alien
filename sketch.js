@@ -57,12 +57,13 @@ function draw() {
     text("1.If any enemy hits alien and your lives are over then the game is over.",50,440)
     text("2.If you have scored 20 marks then you have won the match.",50,480)
     text("3. Use boosters to increse your score and lives",50,520);
+
+    if(keyWentDown("s")){
+      gameState="play";
+    }
     
   }
   
-  if(keyWentDown("r")&& gameState==="end"){
-    gameState="play";
-  }
   
   if(gameState==="play"){
     if(space.y<0){
